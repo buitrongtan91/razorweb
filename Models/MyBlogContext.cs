@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace webappEF.Models
 {
-    public class MyBlogContext : DbContext
+    public class MyBlogContext : IdentityDbContext<AppUser>
     {
         public DbSet<Article> Articles { get; set; }
 
